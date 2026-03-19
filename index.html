@@ -6,25 +6,21 @@
   <meta name="theme-color" content="#0b1220" />
   <title>3D Tic Tac Toe</title>
   <meta name="description" content="A mobile-friendly 3D Tic Tac Toe (3×3×3)." />
-
-  <!-- iOS add-to-home-screen hints -->
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-
   <link rel="manifest" href="./manifest.webmanifest" />
   <link rel="stylesheet" href="./style.css" />
 </head>
 <body>
   <main class="app" role="application" aria-label="3D Tic Tac Toe">
     <header class="header">
-      <div class="title">
+      <div class="titleBlock">
         <h1>3D Tic Tac Toe</h1>
         <p class="subtitle">3×3×3 • two-player • phone-friendly</p>
       </div>
-
       <div class="actions">
         <button id="btnNew" class="btn">New game</button>
-        <button id="btnReset" class="btn btn-secondary" title="Clears score too">Reset all</button>
+        <button id="btnReset" class="btn btn-secondary">Reset all</button>
       </div>
     </header>
 
@@ -39,22 +35,9 @@
 
     <section class="controls" aria-label="View controls">
       <div class="seg">
-        <button id="btn3d" class="segBtn" type="button">3D view</button>
+        <button id="btn3d" class="segBtn" type="button">3D exploded</button>
         <button id="btnFlat" class="segBtn" type="button">Flat view</button>
       </div>
-      <button id="btnViewReset" class="btn btn-secondary" type="button">Reset view</button>
-    </section>
-
-    <section class="boardWrap">
-      <div class="hint">
-        <span class="dot"></span>
-        <span>Tip: drag to rotate in 3D view. Tap a cell to place your mark.</span>
-      </div>
-
-      <div id="scene" class="scene" aria-label="3D board scene">
-        <div id="stack" class="stack" aria-label="3D board stack"></div>
-      </div>
-
       <div id="layerTabs" class="layerTabs" aria-label="Layer selection">
         <button class="tab" data-layer="0" type="button">Layer 1</button>
         <button class="tab" data-layer="1" type="button">Layer 2</button>
@@ -62,13 +45,17 @@
       </div>
     </section>
 
+    <section class="boardWrap">
+      <div class="hint">
+        <span class="dot"></span>
+        <span>3D mode shows all 3 layers at once. Flat view focuses on one layer for easier tapping.</span>
+      </div>
+      <div id="stack" class="stack" aria-label="3D board stack"></div>
+    </section>
+
     <footer class="footer">
-      <p>
-        iPhone: Safari → Share → <strong>Add to Home Screen</strong>.
-      </p>
-      <p class="muted">
-        Static GitHub Pages app. Works offline after first load.
-      </p>
+      <p>iPhone: Safari → Share → <strong>Add to Home Screen</strong>.</p>
+      <p class="muted">Static GitHub Pages app. Works offline after first load.</p>
     </footer>
   </main>
 

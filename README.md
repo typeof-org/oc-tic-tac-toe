@@ -1,28 +1,16 @@
 # 3D Tic Tac Toe (3×3×3)
 
-A tiny, mobile-friendly 3D Tic Tac Toe game, deployed as a static GitHub Pages site.
+A mobile-friendly 3D Tic Tac Toe game built as a static GitHub Pages app.
 
-- Two-player (pass-and-play)
-- 3D view (drag to rotate)
-- Flat view (layer tabs)
-- Offline support (after first load)
+## Modes
 
-## Play
+- **3D exploded**: shows all 3 layers at once in a readable, tappable layout
+- **Flat view**: focus on one layer at a time for easier play on smaller screens
 
-Open the site (GitHub Pages):
+## Live site
 
 https://typeof-org.github.io/oc-tic-tac-toe/
 
 ## iPhone
 
-Safari → Share → **Add to Home Screen**.
-
-## Local dev
-
-Serve the folder with any static server:
-
-```bash
-python3 -m http.server 8000
-```
-
-Then visit: http://localhost:8000
+Open in Safari, then use **Share → Add to Home Screen**.
