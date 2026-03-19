@@ -1,28 +1,28 @@
-# Tic Tac Toe (mobile-friendly)
+# 3D Tic Tac Toe (3×3×3)
 
-A tiny, phone-friendly Tic Tac Toe game built as a static site.
+A tiny, mobile-friendly 3D Tic Tac Toe game, deployed as a static GitHub Pages site.
 
-## Open it on your iPhone
+- Two-player (pass-and-play)
+- 3D view (drag to rotate)
+- Flat view (layer tabs)
+- Offline support (after first load)
 
-Once GitHub Pages finishes building, open the site URL in Safari.
+## Play
 
-Tip: Safari → Share → **Add to Home Screen** (works offline after first load).
+Open the site (GitHub Pages):
+
+https://typeof-org.github.io/oc-tic-tac-toe/
+
+## iPhone
+
+Safari → Share → **Add to Home Screen**.
 
 ## Local dev
 
-Just open `index.html` in a browser, or serve with any static server.
-
-Example:
+Serve the folder with any static server:
 
 ```bash
 python3 -m http.server 8000
 ```
 
 Then visit: http://localhost:8000
-
-## Features
-
-- Responsive 3×3 board
-- Local score tracking (X / O / Draws)
-- Offline support (service worker)
-

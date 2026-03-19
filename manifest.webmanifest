@@ -1,6 +1,6 @@
 {
-  "name": "Tic Tac Toe",
-  "short_name": "TicTacToe",
+  "name": "3D Tic Tac Toe",
+  "short_name": "3D TTT",
   "start_url": "./",
   "display": "standalone",
   "background_color": "#0b1220",

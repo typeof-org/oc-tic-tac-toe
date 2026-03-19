@@ -4,8 +4,8 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#0b1220" />
-  <title>Tic Tac Toe</title>
-  <meta name="description" content="A simple mobile-friendly Tic Tac Toe game." />
+  <title>3D Tic Tac Toe</title>
+  <meta name="description" content="A mobile-friendly 3D Tic Tac Toe (3×3×3)." />
 
   <!-- iOS add-to-home-screen hints -->
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -15,15 +15,16 @@
   <link rel="stylesheet" href="./style.css" />
 </head>
 <body>
-  <main class="app" role="application" aria-label="Tic Tac Toe">
+  <main class="app" role="application" aria-label="3D Tic Tac Toe">
     <header class="header">
-      <div>
-        <h1>Tic Tac Toe</h1>
-        <p class="subtitle">Two-player, phone-friendly, no sign-in.</p>
+      <div class="title">
+        <h1>3D Tic Tac Toe</h1>
+        <p class="subtitle">3×3×3 • two-player • phone-friendly</p>
       </div>
+
       <div class="actions">
         <button id="btnNew" class="btn">New game</button>
-        <button id="btnClear" class="btn btn-secondary" title="Clears score too">Reset all</button>
+        <button id="btnReset" class="btn btn-secondary" title="Clears score too">Reset all</button>
       </div>
     </header>
 
@@ -36,18 +37,37 @@
       </div>
     </section>
 
+    <section class="controls" aria-label="View controls">
+      <div class="seg">
+        <button id="btn3d" class="segBtn" type="button">3D view</button>
+        <button id="btnFlat" class="segBtn" type="button">Flat view</button>
+      </div>
+      <button id="btnViewReset" class="btn btn-secondary" type="button">Reset view</button>
+    </section>
+
     <section class="boardWrap">
-      <div id="board" class="board" role="grid" aria-label="Game board">
-        <!-- cells injected by JS -->
+      <div class="hint">
+        <span class="dot"></span>
+        <span>Tip: drag to rotate in 3D view. Tap a cell to place your mark.</span>
+      </div>
+
+      <div id="scene" class="scene" aria-label="3D board scene">
+        <div id="stack" class="stack" aria-label="3D board stack"></div>
+      </div>
+
+      <div id="layerTabs" class="layerTabs" aria-label="Layer selection">
+        <button class="tab" data-layer="0" type="button">Layer 1</button>
+        <button class="tab" data-layer="1" type="button">Layer 2</button>
+        <button class="tab" data-layer="2" type="button">Layer 3</button>
       </div>
     </section>
 
     <footer class="footer">
       <p>
-        Tip: on iPhone Safari, tap <strong>Share</strong> → <strong>Add to Home Screen</strong>.
+        iPhone: Safari → Share → <strong>Add to Home Screen</strong>.
       </p>
       <p class="muted">
-        Built as a static site (GitHub Pages). Works offline after first load.
+        Static GitHub Pages app. Works offline after first load.
       </p>
     </footer>
   </main>
