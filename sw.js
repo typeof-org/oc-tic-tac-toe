@@ -1,5 +1,5 @@
 /* Offline cache for static assets */
-const CACHE = "ttt3d-v2";
+const CACHE = "ttt3d-v3";
 const ASSETS = [
   "./",
   "./index.html",

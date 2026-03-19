@@ -35,7 +35,6 @@
   // View state
   const view = loadView();
   applyView(view);
-  setViewMode(viewMode);
 
   function idx(x, y, z) {
     return z * N * N + y * N + x;
@@ -324,6 +323,9 @@
   // Initialize current rot from CSS variables
   currentRx = loadView().rx;
   currentRy = loadView().ry;
+
+  // Now that currentRx/currentRy exist, apply the initial view-mode UI.
+  setViewMode(viewMode);
 
   function clamp(n, lo, hi) {
     return Math.max(lo, Math.min(hi, n));
