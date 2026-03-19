@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0b1220" />
+  <title>Tic Tac Toe</title>
+  <meta name="description" content="A simple mobile-friendly Tic Tac Toe game." />
+
+  <!-- iOS add-to-home-screen hints -->
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+  <link rel="manifest" href="./manifest.webmanifest" />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <main class="app" role="application" aria-label="Tic Tac Toe">
+    <header class="header">
+      <div>
+        <h1>Tic Tac Toe</h1>
+        <p class="subtitle">Two-player, phone-friendly, no sign-in.</p>
+      </div>
+      <div class="actions">
+        <button id="btnNew" class="btn">New game</button>
+        <button id="btnClear" class="btn btn-secondary" title="Clears score too">Reset all</button>
+      </div>
+    </header>
+
+    <section class="status" aria-live="polite">
+      <div class="turn" id="turn">Loading…</div>
+      <div class="score" aria-label="Score">
+        <span class="pill">X: <strong id="scoreX">0</strong></span>
+        <span class="pill">O: <strong id="scoreO">0</strong></span>
+        <span class="pill">Draws: <strong id="scoreD">0</strong></span>
+      </div>
+    </section>
+
+    <section class="boardWrap">
+      <div id="board" class="board" role="grid" aria-label="Game board">
+        <!-- cells injected by JS -->
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>
+        Tip: on iPhone Safari, tap <strong>Share</strong> → <strong>Add to Home Screen</strong>.
+      </p>
+      <p class="muted">
+        Built as a static site (GitHub Pages). Works offline after first load.
+      </p>
+    </footer>
+  </main>
+
+  <script src="./app.js" defer></script>
+</body>
+</html>
